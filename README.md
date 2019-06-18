@@ -1,125 +1,54 @@
-# hugo Resume
+# [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
 
-Created from [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/).
+[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
 
-This is basically a single-page website with auto-scrolling based on left-hand nav.  Dedicated project/publications pages allow more detail.  Includes a client-side search powered by fuse.js at '/search' but currently theme does not link to that anywhere.
+## Preview
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+[![Resume Preview](https://startbootstrap.com/assets/img/screenshots/themes/resume.png)](https://blackrockdigital.github.io/startbootstrap-resume/)
 
-- [hugo Resume](#hugo-resume)
-	- [Examples](#examples)
-	- [Setup & Use](#setup-use)
-		- [Summary](#summary)
-		- [Data files](#data-files)
-		- [Projects](#projects)
-		- [Publications](#publications)
-		- [Template params](#template-params)
-	- [Credits](#credits)
-		- [Start Bootstrap Resume](#start-bootstrap-resume)
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-resume/)**
 
-<!-- /TOC -->
+## Status
 
-## Examples
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-resume/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-resume.svg)](https://www.npmjs.com/package/startbootstrap-resume)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-resume.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-resume)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume?type=dev)
 
-![About You](https://raw.githubusercontent.com/eddiewebb/hugo-resume/master/images/about.png)
+## Download and Installation
 
-![With optional Contact QR Code](https://raw.githubusercontent.com/eddiewebb/hugo-resume/master/images/qrcode.png)
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
+* Install via npm: `npm i startbootstrap-resume`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-resume.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-resume)
 
-![Highlight skills with dev icons](https://raw.githubusercontent.com/eddiewebb/hugo-resume/master/images/skills.png)
+## Usage
 
-![List featured projects](https://raw.githubusercontent.com/eddiewebb/hugo-resume/master/images/projects.png)
+### Basic Usage
 
-![Searchable content](https://raw.githubusercontent.com/eddiewebb/hugo-resume/master/images/search.png)
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-See [Eddie's site](https://edwardawebb.com) for a live example.
+### Advanced Usage
 
-## Setup & Use
+After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-This theme uses a combination of a custom archetype `projects` and some data files to drive content.
+#### Gulp Tasks
 
-You can test the provided [exampleSite](exampleSite) after cloning with the command:
-`cd exampleSite;hugo -t hugo-resume --themesDir ../.. server`
+- `gulp` the default task that builds everything
+- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
+- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
+- `gulp js` minifies the themes JS file
+- `gulp vendor` copies dependencies from node_modules to the vendor directory
 
-### Summary
-Edit the main `contents/_index.md with a brief bio/summary`
+You must have npm installed globally in order to use this build environment.
 
-### Data files
-Data files are used for simple content presented on the homepage.
+## Bugs and Issues
 
-- [data/skills.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/skills.json)
-- [data/experience.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/experience.json)
-- [data/education.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/education.json)
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-resume/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/resume/).
 
-### Projects
-Initially projects were in their own JSON file too, but I decided I wanted to allow more detail and custom formatting.
-Projects are added to one of 2 subfolders of `creations` or `contributions`. The difference indicates your role as originator or colaborator.   Use `hugo add projects/TYPE/name-of-project.md` to leverage the proper archetype.
-
-### Publications
-Similar to projects, create them under `publications`. Include any papers, speaking engagements, articles, etc.
-
-### Template params
-
-All personal information outside the above details is captured by params in [`config.toml`](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/config.toml)
-
-```
-[params]
-    firstName = "Eddie"
-    lastName = "Webb"
-    address = "Rollinsford, NH"
-    phone = "1-555-555-1234"
-    contactNote = "Dev Tools Engineer" #used in QR code only
-    profileImage = "img/me.png"
-    email = "email@domain.com"
-    description = "Software Platform Engineer with experience leveraging agile, DevOps, and CI/CD to manage large scale distributed platforms both on prem and in public cloud."
-    favicon = "images/favicon.ico"
-
-    # what sections to display.  Setting to false disables navigation and section.
-    showSkills = true
-    showProjects = true
-    showOpenSource = true
-    showPublications = true
-    showExperience = true
-    showEducation = true
-    showQr = true
-
-    # do you want to show git hash on page footer and link to repo? Add commit URl for repo here.
-    gitCommitPrefix = "https://github.com/YOURNAME/REPONAME/commit/"
-
-
-[[params.handles]]
-    name = "LinkedIn"
-    link = "https://www.linkedin.com/in/edwardwebb/"
-
-[[params.handles]]
-    name = "GitHub"
-    link = "https://github.com/eddiewebb/"
-
-[[params.handles]]
-    name = "Bitbucket"
-    link = "https://bitbucket.org/eddiewebb/"
-
-[[params.handles]]
-    name = "Stack Overflow"
-    link = "https://stackoverflow.com/users/story/82880"
-    icon = "stack-overflow" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
-
-[[params.handles]]
-    name = "Keybase"
-    link = "https://keybase.io/edwardawebb"
-    icon = "key" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
-
-[params.google.analytics]
-    trackerID = "XX-123446-01"
-
-[outputs] #only required for search
-    home = ["HTML", "JSON"]
-```
-
-## Credits
-
-This project ports the Start Bootstrap Resume theme by David Miller to support hugo.
-
-### Start Bootstrap Resume
+## About
 
 Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
@@ -133,3 +62,7 @@ Start Bootstrap was created by and is maintained by **[David Miller](http://davi
 * https://github.com/davidtmiller
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
